@@ -1,8 +1,13 @@
+const path = require('path');
+
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        app: './src/index.js'
+    },
     output: {
+        filename: 'promise-error-handler.bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        filename: 'promise-error-handler.js',
+        clean: true,
         library: {
             name: 'tryError',
             type: 'umd'

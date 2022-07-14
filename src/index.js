@@ -15,7 +15,7 @@
  * @param { Object } extendedError - Extend the error object when passed
  * @return { Promise }
  */
-export function tryError(callback, extendedError) {
+export default function tryError(callback, extendedError) {
     let promise = null
     if (typeof callback === 'object' && typeof callback.then === 'function') {
         promise = callback
